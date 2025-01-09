@@ -3,15 +3,17 @@
     partial class reservation
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView dataGridViewRooms;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPhone;
-        private System.Windows.Forms.ComboBox comboBoxRooms;
-        private System.Windows.Forms.DateTimePicker dateTimePickerCheckIn;
-        private System.Windows.Forms.DateTimePicker dateTimePickerCheckOut;
         private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Label labelTotalPrice;
+        private System.Windows.Forms.MonthCalendar monthCalendarAvailability;
 
+        /// <summary>
+        /// Dispose resources
+        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,120 +23,144 @@
             base.Dispose(disposing);
         }
 
+        /// <summary>
+        /// Initialize components
+        /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.comboBoxRooms = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerCheckIn = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerCheckOut = new System.Windows.Forms.DateTimePicker();
-            this.buttonConfirm = new System.Windows.Forms.Button();
+            dataGridViewRooms = new DataGridView();
+            textBoxName = new TextBox();
+            textBoxEmail = new TextBox();
+            textBoxPhone = new TextBox();
+            buttonConfirm = new Button();
+            labelTotalPrice = new Label();
+            monthCalendarAvailability = new MonthCalendar();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).BeginInit();
+            SuspendLayout();
 
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.SuspendLayout();
+            // Form background color
+            this.BackColor = ColorTranslator.FromHtml("#DAD7CD");
 
-            // dataGridView
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView.Name = "dataGridViewRooms";
-            this.dataGridView.Size = new System.Drawing.Size(760, 250); // Zmniejszenie rozmiaru DataGridView
-            this.dataGridView.TabIndex = 0;
+            // 
+            // dataGridViewRooms
+            // 
+            dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewRooms.Location = new Point(10, 11);
+            dataGridViewRooms.Name = "dataGridViewRooms";
+            dataGridViewRooms.Size = new Size(665, 234);
+            dataGridViewRooms.TabIndex = 0;
+            dataGridViewRooms.BackgroundColor = ColorTranslator.FromHtml("#A3B18A");
+            dataGridViewRooms.ForeColor = ColorTranslator.FromHtml("#344E41");
+            dataGridViewRooms.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+
+            // 
             // textBoxName
-            this.textBoxName.Location = new System.Drawing.Point(50, 280); // Przeniesienie pola poniżej DataGridView
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.PlaceholderText = "Imię i nazwisko";
-            this.textBoxName.Size = new System.Drawing.Size(300, 22);
-            this.textBoxName.BackColor = Color.FromArgb(218, 215, 205); // DAD7CD (jasny beż)
+            // 
+            textBoxName.Location = new Point(44, 262);
+            textBoxName.Name = "textBoxName";
+            textBoxName.PlaceholderText = "Imię i nazwisko";
+            textBoxName.Size = new Size(263, 23);
+            textBoxName.TabIndex = 1;
+            textBoxName.BackColor = ColorTranslator.FromHtml("#A3B18A");
+            textBoxName.ForeColor = ColorTranslator.FromHtml("#344E41");
+            textBoxName.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
+            // 
             // textBoxEmail
-            this.textBoxEmail.Location = new System.Drawing.Point(50, 320); // Przeniesienie pola poniżej
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.PlaceholderText = "Email";
-            this.textBoxEmail.Size = new System.Drawing.Size(300, 22);
-            this.textBoxEmail.BackColor = Color.FromArgb(218, 215, 205); // DAD7CD (jasny beż)
+            // 
+            textBoxEmail.Location = new Point(44, 300);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.PlaceholderText = "Email";
+            textBoxEmail.Size = new Size(263, 23);
+            textBoxEmail.TabIndex = 2;
+            textBoxEmail.BackColor = ColorTranslator.FromHtml("#A3B18A");
+            textBoxEmail.ForeColor = ColorTranslator.FromHtml("#344E41");
+            textBoxEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
+            // 
             // textBoxPhone
-            this.textBoxPhone.Location = new System.Drawing.Point(50, 360); // Przeniesienie pola poniżej
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.PlaceholderText = "Numer telefonu";
-            this.textBoxPhone.Size = new System.Drawing.Size(300, 22);
-            this.textBoxPhone.BackColor = Color.FromArgb(218, 215, 205); // DAD7CD (jasny beż)
+            // 
+            textBoxPhone.Location = new Point(44, 338);
+            textBoxPhone.Name = "textBoxPhone";
+            textBoxPhone.PlaceholderText = "Numer telefonu";
+            textBoxPhone.Size = new Size(263, 23);
+            textBoxPhone.TabIndex = 3;
+            textBoxPhone.BackColor = ColorTranslator.FromHtml("#A3B18A");
+            textBoxPhone.ForeColor = ColorTranslator.FromHtml("#344E41");
+            textBoxPhone.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
-            // comboBoxRooms
-            this.comboBoxRooms.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxRooms.Location = new System.Drawing.Point(50, 400); // Przeniesienie pola poniżej
-            this.comboBoxRooms.Name = "comboBoxRooms";
-            this.comboBoxRooms.Size = new System.Drawing.Size(300, 22);
-            this.comboBoxRooms.BackColor = Color.FromArgb(218, 215, 205); // DAD7CD (jasny beż)
-
-            // dateTimePickerCheckIn
-            this.dateTimePickerCheckIn.Location = new System.Drawing.Point(50, 440); // Przeniesienie pola poniżej
-            this.dateTimePickerCheckIn.Name = "dateTimePickerCheckIn";
-            this.dateTimePickerCheckIn.Size = new System.Drawing.Size(300, 22);
-
-            // dateTimePickerCheckOut
-            this.dateTimePickerCheckOut.Location = new System.Drawing.Point(50, 480); // Przeniesienie pola poniżej
-            this.dateTimePickerCheckOut.Name = "dateTimePickerCheckOut";
-            this.dateTimePickerCheckOut.Size = new System.Drawing.Size(300, 22);
-
+            // 
             // buttonConfirm
-            this.buttonConfirm.Location = new System.Drawing.Point(50, 520);
-            this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(300, 30);
-            this.buttonConfirm.Text = "Potwierdź rezerwację";
-            this.buttonConfirm.UseVisualStyleBackColor = true;
-            this.buttonConfirm.BackColor = Color.FromArgb(88, 129, 87); // 588157 (zielony)
-            this.buttonConfirm.ForeColor = Color.FromArgb(218, 215, 205); // DAD7CD (jasny beż)
-            this.buttonConfirm.MouseEnter += Button_MouseEnter;
-            this.buttonConfirm.MouseLeave += Button_MouseLeave;
-            this.buttonConfirm.Click += buttonConfirm_Click;
+            // 
+            buttonConfirm.Location = new Point(44, 468);
+            buttonConfirm.Name = "buttonConfirm";
+            buttonConfirm.Size = new Size(263, 28);
+            buttonConfirm.TabIndex = 7;
+            buttonConfirm.Text = "Potwierdź rezerwację";
+            buttonConfirm.UseVisualStyleBackColor = true;
+            buttonConfirm.BackColor = ColorTranslator.FromHtml("#588157");
+            buttonConfirm.ForeColor = Color.White;
+            buttonConfirm.FlatStyle = FlatStyle.Flat;
+            buttonConfirm.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonConfirm.MouseEnter += ButtonConfirm_MouseEnter;
+            buttonConfirm.MouseLeave += ButtonConfirm_MouseLeave;
+            buttonConfirm.Click += buttonConfirm_Click;
 
+            // 
+            // labelTotalPrice
+            // 
+            labelTotalPrice.Location = new Point(350, 262);
+            labelTotalPrice.Name = "labelTotalPrice";
+            labelTotalPrice.Size = new Size(262, 21);
+            labelTotalPrice.TabIndex = 8;
+            labelTotalPrice.Text = "Cena całkowita: 0 zł";
+            labelTotalPrice.ForeColor = ColorTranslator.FromHtml("#3A5A40");
+            labelTotalPrice.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
+            // 
+            // monthCalendarAvailability
+            // 
+            monthCalendarAvailability.Location = new Point(350, 300);
+            monthCalendarAvailability.MaxSelectionCount = 30;
+            monthCalendarAvailability.Name = "monthCalendarAvailability";
+            monthCalendarAvailability.TabIndex = 9;
+            monthCalendarAvailability.TitleBackColor = ColorTranslator.FromHtml("#344E41");
+            monthCalendarAvailability.TitleForeColor = Color.White;
+            monthCalendarAvailability.TrailingForeColor = ColorTranslator.FromHtml("#3A5A40");
+            monthCalendarAvailability.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            monthCalendarAvailability.DateChanged += MonthCalendarAvailability_DateChanged;
+
+            // 
             // reservation
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 570); // Zwiększenie wysokości okna, aby pomieścić wszystkie kontrolki
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.comboBoxRooms);
-            this.Controls.Add(this.dateTimePickerCheckIn);
-            this.Controls.Add(this.dateTimePickerCheckOut);
-            this.Controls.Add(this.buttonConfirm);
-            this.Controls.Add(this.dataGridView);
-            this.Name = "reservation";
-            this.Text = "Reservation";
-            this.BackColor = Color.FromArgb(218, 215, 205); // Tło formularza - DAD7CD (jasny beż)
-            this.Load += new System.EventHandler(this.reservation_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 562);
+            Controls.Add(dataGridViewRooms);
+            Controls.Add(textBoxName);
+            Controls.Add(textBoxEmail);
+            Controls.Add(textBoxPhone);
+            Controls.Add(buttonConfirm);
+            Controls.Add(labelTotalPrice);
+            Controls.Add(monthCalendarAvailability);
+            Name = "reservation";
+            Text = "Reservation";
+            Load += reservation_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
-        // Event handlers for mouse hover effects
-        private void Button_MouseEnter(object sender, EventArgs e)
+        // Change button color on hover
+        private void ButtonConfirm_MouseEnter(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-            if (btn != null)
-            {
-                btn.BackColor = Color.FromArgb(163, 177, 138); //  A3B18A (zielony) najechanie
-            }
+            buttonConfirm.BackColor = ColorTranslator.FromHtml("#A3B18A");
         }
 
-        private void Button_MouseLeave(object sender, EventArgs e)
+        // Reset button color on mouse leave
+        private void ButtonConfirm_MouseLeave(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-            if (btn != null)
-            {
-                btn.BackColor = Color.FromArgb(88, 129, 87); // 588157 (zielony)
-            }
-        }
-
-        private void buttonConfirm_Click(object sender, EventArgs e)
-        {
-            // Placeholder for button click event
-            throw new NotImplementedException();
+            buttonConfirm.BackColor = ColorTranslator.FromHtml("#588157");
         }
     }
 }

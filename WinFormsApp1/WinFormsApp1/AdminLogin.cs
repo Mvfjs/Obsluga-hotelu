@@ -19,8 +19,8 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string correctLogin = "Recepcja";
-            string correctPassword = "Recepcj@202$!";
+            string correctLogin = "123";
+            string correctPassword = "123";
 
             string login = textBox1.Text;
             string password = textBox2.Text;

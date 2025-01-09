@@ -45,4 +45,8 @@ C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\run
 C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinForms.E4050A35.Up2Date
-C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ReservationForm.resources
+C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.reservation.resources
+C:\Users\Max\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AddRoomForm.resources
