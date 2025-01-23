@@ -43,7 +43,7 @@ Aplikacja jest systemem zarządzania operacjami hotelowymi, zaprojektowanym w te
 
 ## Przykłady mechanizmów OOP
 
-### **1. Hermetyzacja (Encapsulation)**
+### **1. Hermetyzacja**
 Hermetyzacja polega na ukrywaniu szczegółów implementacji oraz ograniczaniu dostępu do danych poprzez właściwości i metody.
 
 #### **Przykład z `GuestLogin`**
@@ -129,7 +129,7 @@ Dane wejściowe są weryfikowane i pobierane w sposób ograniczający błędy.
 
 ---
 
-### **2. Dziedziczenie (Inheritance)**
+### **2. Dziedziczenie**
 Dziedziczenie umożliwia ponowne wykorzystanie kodu poprzez rozszerzanie klas bazowych.
 
 #### **Przykład z `DatabaseForm`**
@@ -163,7 +163,7 @@ public partial class reservation : ValidationForm { ... }
 
 ---
 
-### **3. Polimorfizm (Polymorphism)**
+### **3. Polimorfizm**
 Polimorfizm umożliwia różne zachowania tej samej metody w zależności od klasy lub kontekstu.
 
 #### **Przykład dynamicznego ładowania danych w `Admin`**
