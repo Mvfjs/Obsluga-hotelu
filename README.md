@@ -21,7 +21,6 @@ Aplikacja jest systemem zarządzania operacjami hotelowymi, zaprojektowanym w te
 ## Funkcjonalności
 
 ### Panel Administratora
-- Zarządzanie gośćmi hotelowymi (dodawanie, edytowanie, usuwanie).
 - Zarządzanie pokojami (dodawanie, edytowanie, zmiana statusów, np. wolny/zajęty).
 - Zarządzanie usługami hotelu (np. dodawanie nowych usług, aktualizacja cen).
 
